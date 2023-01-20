@@ -14,6 +14,6 @@ RUN pip install make
 EXPOSE 8000
 
 CMD [ "/usr/bin/make", "dockerRunserver"]
-CMD [ "/usr/bin/gunicorn", "-w", "3", "-b", ":8000", "answerking.wsgi:app"]
+#CMD [ "/usr/bin/gunicorn", "-w", "3", "-b", ":8000", "answerking.wsgi:app"]
 
 #CMD gunicorn answerking.wsgi:application — bind 0.0.0.0:8000 — workers 3
