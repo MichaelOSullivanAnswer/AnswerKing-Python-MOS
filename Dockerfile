@@ -8,8 +8,8 @@ COPY . /AnswerKing-Python
 WORKDIR /AnswerKing-Python
 
 RUN pip install poetry
-RUN poetry install
+RUN poetry install --only main
 RUN pip install make
 
 CMD [ "/usr/bin/make", "dockerRunserver"]
-CMD ["gunicorn", "-w", "3", "-b", ":8000", "answerking.wsgi:application"]
+CMD ["gunicorn", "-w", "3", "-b", ":80", "answerking.wsgi:application"]
