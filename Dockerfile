@@ -11,5 +11,7 @@ RUN pip install poetry
 RUN poetry install --only main
 RUN pip install make
 
+EXPOSE 8000
+
 CMD [ "/usr/bin/make", "dockerRunserver"]
-CMD ["gunicorn", "-w", "3", "-b", ":80", "answerking.wsgi:application"]
+CMD exec gunicorn answerking.wsgi:application — bind 0.0.0.0:8000 — workers 3
