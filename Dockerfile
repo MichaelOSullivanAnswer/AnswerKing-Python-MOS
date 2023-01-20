@@ -12,3 +12,4 @@ RUN poetry install
 RUN pip install make
 
 CMD [ "/usr/bin/make", "dockerRunserver"]
+CMD ["gunicorn", "-w", "3", "-b", ":8000", "answerking.wsgi:application"]
