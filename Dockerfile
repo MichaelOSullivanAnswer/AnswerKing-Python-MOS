@@ -17,4 +17,4 @@ EXPOSE 8000
 CMD [ "/usr/bin/make", "dockerRunserver"]
 # CMD [ "/usr/bin/gunicorn", "-b", ":8000", "answerking.wsgi:app"]
 
-CMD gunicorn answerking.wsgi:application — bind 0.0.0.0:8000 
+# CMD gunicorn answerking.wsgi:application — bind 0.0.0.0:8000
