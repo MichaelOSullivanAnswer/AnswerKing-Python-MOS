@@ -24,7 +24,7 @@ migrate:
 dockerRunserver:
 	poetry run python manage.py waitForDB
 	poetry run python manage.py migrate
-	poetry run gunicorn -b 0.0.0.0:8000 -t 900 answerking.wsgi:application
+	poetry run gunicorn -b 0.0.0.0:8000 answerking.wsgi:application
 
 
 prepare: lint test
