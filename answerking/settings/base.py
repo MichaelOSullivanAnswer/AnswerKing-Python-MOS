@@ -1,5 +1,5 @@
 """
-Django base settings for answerking projectcd.
+Django base settings for answerking projectcd
 """
 import os
 from pathlib import Path
