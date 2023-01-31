@@ -1,5 +1,5 @@
 """
-Django development settings for answerking project.
+Django development settings for answerking project..
 """
 from answerking.settings.base import *
 
