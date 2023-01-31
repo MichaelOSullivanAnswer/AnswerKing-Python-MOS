@@ -57,10 +57,10 @@ jobs:
 
     - name: Build image
       id: build-image
-      uses: docker/build-push-action@master
+      uses: docker/build-push-action@v2
       with:
         context: .
-        file: ./dockerfile
+        file: ./Dockerfile
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
