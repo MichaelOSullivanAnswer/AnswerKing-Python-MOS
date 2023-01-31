@@ -57,7 +57,7 @@ jobs:
 
     - name: Build image
       id: build-image
-      uses: docker/build-push-actionn@master
+      uses: docker/build-push-action@master
       with:
         context: .
         file: ./dockerfile
