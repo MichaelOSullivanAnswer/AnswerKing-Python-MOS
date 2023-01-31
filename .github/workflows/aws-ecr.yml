@@ -67,7 +67,7 @@ jobs:
 
     - name: Download task definition
       run: |
-        aws ecs describe-task-definition --task-definition answerking-dotnet-api-task --query taskDefinition > ${{ env.ECS_TASK_DEFINITION }}
+        aws ecs describe-task-definition --task-definition ak-python-task --query taskDefinition > ${{ env.ECS_TASK_DEFINITION }}
 
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
